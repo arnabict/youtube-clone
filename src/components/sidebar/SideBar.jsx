@@ -13,9 +13,9 @@ import simon from "../../assets/simon.png";
 import vik from "../../assets/vik.png";
 import talia from "../../assets/talia.png";
 
-const SideBar = () => {
+const SideBar = ({ sidebar }) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${sidebar ? "" : "small-sidebar"}`}>
       <div className="shortcut-links">
         <div className="side-links">
           <img src={home_icon} alt="" />
@@ -56,7 +56,7 @@ const SideBar = () => {
         <hr />
       </div>
       <div className="subscribed-list">
-        <h3>Subscribed</h3>
+        <h3>Subscribtions</h3>
         <div className="side-links">
           <img src={simon} alt="" />
           <p>Miniminter</p>
